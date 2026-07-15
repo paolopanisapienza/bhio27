@@ -141,12 +141,16 @@ footer { padding: 34px 6vw; background: #070a10; color: rgba(255,255,255,.75); t
     list-style: none;
     padding: 0;
     margin: 0;
-    columns: 1;
+    column-count: 1 !important;
+    columns: 1 !important;
+    column-gap: 0 !important;
 }
+
 .name-list li {
+    display: block;
+    width: 100%;
     padding: 10px 0;
     border-bottom: 1px solid var(--line);
-    break-inside: avoid;
 }
 .schedule h2 { padding-top: 24px; border-top: 1px solid var(--line); }
 ul { padding-left: 1.2rem; }
