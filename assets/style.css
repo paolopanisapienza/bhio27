@@ -155,14 +155,14 @@ ul { padding-left: 1.2rem; }
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
-    margin-top: 1rem;
 }
 
 .logo-row img {
-    height: 70px;      /* all logos same height */
-    width: auto;       /* preserve aspect ratio */
+    width: auto !important;
+    max-width: none !important;
+    height: 60px !important;
     object-fit: contain;
 }
 
