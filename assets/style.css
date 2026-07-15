@@ -137,8 +137,17 @@ footer { padding: 34px 6vw; background: #070a10; color: rgba(255,255,255,.75); t
 .page-title { padding: 125px 6vw 64px; color: white; background: radial-gradient(circle at 50% 20%, rgba(200,155,60,.4), transparent 20%), linear-gradient(140deg, #060910, #17233f 60%, #3b260e); text-align: center; }
 .page-title h1 { margin: 0; font-size: clamp(3rem, 7vw, 6rem); font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -.04em; }
 .page .section h2 { font-size: 2rem; margin-top: 42px; }
-.name-list { list-style: none; padding: 0; columns: 2; column-gap: 48px; }
-.name-list li { break-inside: avoid; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.name-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 1;
+}
+.name-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    break-inside: avoid;
+}
 .schedule h2 { padding-top: 24px; border-top: 1px solid var(--line); }
 ul { padding-left: 1.2rem; }
 @media (max-width: 900px) {
