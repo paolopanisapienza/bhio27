@@ -1,4 +1,5 @@
 <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
@@ -7,6 +8,79 @@
    Explore Rome &mdash; BHIO II
   </title>
   <link href="assets/style.css" rel="stylesheet"/>
+  <style>
+   .rome-hero-photo {
+  margin: 0 0 42px;
+}
+
+.rome-hero-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 42vw, 480px);
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 20px 45px rgba(20, 16, 10, .16);
+}
+
+.rome-hero-photo figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: .82rem;
+  text-align: right;
+}
+
+.rome-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 30px 0 46px;
+}
+
+.rome-card {
+  padding: 25px;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 36px rgba(20, 16, 10, .06);
+}
+
+.rome-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+}
+
+.rome-card p {
+  margin: 0 0 14px;
+}
+
+.rome-card a,
+.rome-links a {
+  color: #6f4f13;
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+.rome-tip {
+  margin: 36px 0;
+  padding: 24px 26px;
+  background: var(--paper-2);
+  border-left: 4px solid var(--gold);
+}
+
+.rome-itinerary {
+  margin: 18px 0 34px;
+  padding-left: 1.2rem;
+}
+
+.rome-itinerary li {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 760px) {
+  .rome-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
  </head>
  <body>
   <header class="site-header small">
@@ -18,14 +92,299 @@
      ☰
     </button>
     <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="program.html">Program</a>
-        <a href="speakers.html">Invited Speakers</a>
-        <a href="participants.html">Participants</a>
-        <a href="posters.html">Posters</a>
-        <a href="registration.html">Registration</a>
-        <a href="travel.html">Travel Info</a>
-        <a href="explore-rome.html">Explore Rome</a>
-      </div>
+     <a href="about.html">
+      About
+     </a>
+     <a href="program.html">
+      Program
+     </a>
+     <a href="speakers.html">
+      Invited Speakers
+     </a>
+     <a href="participants.html">
+      Participants
+     </a>
+     <a href="posters.html">
+      Posters
+     </a>
+     <a href="registration.html">
+      Registration
+     </a>
+     <a href="travel.html">
+      Travel Info
+     </a>
+     <a href="explore-rome.html">
+      Explore Rome
+     </a>
+    </div>
    </nav>
-</header><main class="page"><section class="page-title"><p class="eyebrow">A strong advice on what to visit</p><h1>Explore Rome</h1></section><section class="section narrow"><p>Welcome to Rome. The city is full of historical, artistic, and culinary landmarks, but this page is meant to collect more personal suggestions from the local organizers and participants.</p><h2>Near Sapienza</h2><ul><li>San Lorenzo for informal dinners and bars close to the university.</li><li>Villa Torlonia for a quiet walk.</li><li>Quartiere Coppedè for a short architectural detour.</li></ul><h2>Classical Rome</h2><ul><li>Colosseum, Roman Forum, and Palatine Hill.</li><li>Pantheon, Piazza Navona, and Campo de’ Fiori.</li><li>Capitoline Hill and the view over the Forum.</li></ul><h2>Evening walks</h2><ul><li>Trastevere and the Tiber Island.</li><li>Monti and the area around Via dei Serpenti.</li><li>Gianicolo terrace for a panoramic view.</li></ul><h2>Further suggestions</h2><p>Add personal recommendations from the local organizing committee here: museums, restaurants, walks, bookstores, music venues, and day trips.</p></section></main><footer><p>Black Holes Inside and Out II · Sapienza University of Rome</p></footer><script src="assets/script.js"></script></body></html>
+  </header>
+  <main class="page">
+   <section class="page-title">
+    <p class="eyebrow">
+     A strong advice on what to visit
+    </p>
+    <h1>
+     Explore Rome
+    </h1>
+   </section>
+   <section class="section narrow">
+    <p>
+     Rome is too large to be reduced to a checklist. This page offers a few suggestions from the local
+  organizers, combining the essential monuments with quieter places, evening walks, and areas that are
+  easy to reach from Sapienza.
+    </p>
+    <figure class="rome-hero-photo">
+     <img alt="Panoramic view of central Rome from the Janiculum Hill" src="assets/rome-gianicolo.jpg"/>
+     <figcaption>
+      View from the Janiculum Hill. Photo: Jorge Franganillo,
+      <a href="https://commons.wikimedia.org/wiki/File:Roma_Gianicolo_(52380663708).jpg" rel="noopener noreferrer" target="_blank">
+       CC BY 2.0
+      </a>
+      .
+     </figcaption>
+    </figure>
+    <h2>
+     Close to Sapienza
+    </h2>
+    <div class="rome-grid">
+     <article class="rome-card">
+      <h3>
+       San Lorenzo
+      </h3>
+      <p>
+       The lively district immediately south of the university, with informal restaurants, pizzerias,
+      caf&eacute;s, street art, and a strong student atmosphere. It is the easiest option for dinner after
+      the conference.
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=San+Lorenzo+Rome" rel="noopener noreferrer" target="_blank">
+       Open in Google Maps
+      </a>
+     </article>
+     <article class="rome-card">
+      <h3>
+       Villa Torlonia
+      </h3>
+      <p>
+       A pleasant historic park on Via Nomentana, suitable for a quiet walk. The park also contains the
+      Casino Nobile, the Casina delle Civette, and other unusual buildings.
+      </p>
+      <a href="https://www.museivillatorlonia.it/en" rel="noopener noreferrer" target="_blank">
+       Official information
+      </a>
+     </article>
+     <article class="rome-card">
+      <h3>
+       Quartiere Copped&egrave;
+      </h3>
+      <p>
+       A small early-twentieth-century architectural complex around Piazza Mincio, mixing Liberty,
+      Art Deco, Gothic, Baroque, and medieval elements. It can be combined with Villa Torlonia.
+      </p>
+      <a href="https://www.turismoroma.it/en/places/quartiere-copped%C3%A8" rel="noopener noreferrer" target="_blank">
+       Official tourism page
+      </a>
+     </article>
+     <article class="rome-card">
+      <h3>
+       Santa Maria Maggiore
+      </h3>
+      <p>
+       One of Rome's four major papal basilicas, within walking distance of Termini and not far from
+      Sapienza. It is especially impressive in the early evening.
+      </p>
+      <a href="https://www.turismoroma.it/en/places/basilica-santa-maria-maggiore" rel="noopener noreferrer" target="_blank">
+       Official tourism page
+      </a>
+     </article>
+    </div>
+    <h2>
+     The essential Rome
+    </h2>
+    <ul class="rome-itinerary">
+     <li>
+      <strong>
+       Colosseum, Roman Forum, and Palatine Hill.
+      </strong>
+      Reserve sufficient time and book timed-entry tickets in advance through the
+      <a href="https://colosseo.it/en/" rel="noopener noreferrer" target="_blank">
+       official archaeological park website
+      </a>
+      .
+     </li>
+     <li>
+      <strong>
+       Pantheon, Piazza Navona, and Campo de' Fiori.
+      </strong>
+      These sites are close enough to form a single walk through the historic centre.
+     </li>
+     <li>
+      <strong>
+       Capitoline Hill.
+      </strong>
+      The terrace behind the Palazzo Senatorio offers one of the best views over the Roman Forum.
+    The Capitoline Museums are also an excellent option during the hottest part of the day.
+     </li>
+     <li>
+      <strong>
+       Vatican Museums and St Peter's Basilica.
+      </strong>
+      Advance booking is strongly recommended for the museums.
+     </li>
+    </ul>
+    <div class="rome-tip">
+     <strong>
+      Local advice:
+     </strong>
+     Rome is best explored on foot, but avoid planning too much in a single
+  afternoon. In late August, visit exposed archaeological sites early in the morning and leave museums,
+  churches, or shaded neighbourhoods for the hottest hours.
+    </div>
+    <h2>
+     Evening walks
+    </h2>
+    <div class="rome-grid">
+     <article class="rome-card">
+      <h3>
+       Trastevere and the Tiber Island
+      </h3>
+      <p>
+       Cross the river near the Jewish Ghetto, walk through the Tiber Island, and continue into the
+      smaller streets of Trastevere. The main squares can be crowded, but the side streets are rewarding.
+      </p>
+      <a href="https://www.google.com/maps/dir/Piazza+Mattei,+Rome/Isola+Tiberina/Trastevere,+Rome" rel="noopener noreferrer" target="_blank">
+       Suggested walking route
+      </a>
+     </article>
+     <article class="rome-card">
+      <h3>
+       Monti and Via dei Fori Imperiali
+      </h3>
+      <p>
+       Start in Monti, walk down Via dei Serpenti, and continue toward the Colosseum and the Imperial
+      Fora. The archaeological area is particularly atmospheric after sunset.
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Monti+Rome" rel="noopener noreferrer" target="_blank">
+       Open in Google Maps
+      </a>
+     </article>
+     <article class="rome-card">
+      <h3>
+       Janiculum Hill
+      </h3>
+      <p>
+       The Gianicolo offers a broad panorama over central Rome. A good route starts in Trastevere and
+      climbs toward the Fontana dell'Acqua Paola and the panoramic terrace.
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Terrazza+del+Gianicolo+Rome" rel="noopener noreferrer" target="_blank">
+       Open in Google Maps
+      </a>
+     </article>
+     <article class="rome-card">
+      <h3>
+       Pincian Hill and Villa Borghese
+      </h3>
+      <p>
+       From Piazza del Popolo, climb to the Pincio terrace and continue through Villa Borghese.
+      This is one of the most pleasant sunset walks in the city.
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Terrazza+del+Pincio+Rome" rel="noopener noreferrer" target="_blank">
+       Open in Google Maps
+      </a>
+     </article>
+    </div>
+    <h2>
+     Less obvious choices
+    </h2>
+    <ul>
+     <li>
+      <strong>
+       Centrale Montemartini
+      </strong>
+      &mdash; classical sculpture displayed among the machinery of a
+    former power station.
+     </li>
+     <li>
+      <strong>
+       Palazzo Altemps
+      </strong>
+      &mdash; an outstanding collection of ancient sculpture in a relatively
+    quiet Renaissance palace near Piazza Navona.
+     </li>
+     <li>
+      <strong>
+       Non-Catholic Cemetery and Testaccio
+      </strong>
+      &mdash; a peaceful historic cemetery followed by
+    one of Rome's most distinctive neighbourhoods.
+     </li>
+     <li>
+      <strong>
+       Orto Botanico
+      </strong>
+      &mdash; Sapienza's botanical garden on the slopes of the Janiculum,
+    particularly suitable for a slower afternoon.
+     </li>
+     <li>
+      <strong>
+       Ostia Antica
+      </strong>
+      &mdash; an excellent half-day or full-day excursion for those who want a
+    major archaeological site outside the city centre.
+     </li>
+    </ul>
+    <h2>
+     Food and everyday Rome
+    </h2>
+    <p>
+     Roman cooking is based on a relatively small number of strong traditional dishes. Typical choices
+  include
+     <em>
+      carbonara
+     </em>
+     ,
+     <em>
+      gricia
+     </em>
+     ,
+     <em>
+      amatriciana
+     </em>
+     ,
+     <em>
+      cacio e pepe
+     </em>
+     ,
+     <em>
+      saltimbocca
+     </em>
+     , artichokes, and
+     <em>
+      suppl&igrave;
+     </em>
+     . In San Lorenzo, Testaccio, Trastevere, and Monti, it is usually better to choose
+  a simple trattoria or pizzeria away from the most crowded squares.
+    </p>
+    <p>
+     For current exhibitions, concerts, accessibility information, official attraction pages, and
+  practical city updates, consult the
+     <a href="https://www.turismoroma.it/en" rel="noopener noreferrer" target="_blank">
+      official Turismo Roma website
+     </a>
+     .
+    </p>
+    <p class="muted">
+     Opening times, ticketing systems, and access rules may change. Always verify details on the official
+  website of the monument or museum before visiting.
+    </p>
+   </section>
+  </main>
+  <footer>
+   <p>
+    Black Holes Inside and Out II &middot; Sapienza University of Rome
+   </p>
+  </footer>
+  <script src="assets/script.js">
+  </script>
+ </body>
+</html>
