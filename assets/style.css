@@ -150,3 +150,22 @@ ul { padding-left: 1.2rem; }
   .cards { grid-template-columns: 1fr; }
   .name-list { columns: 1; }
 }
+
+.logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.logo-row img {
+    height: 70px;      /* all logos same height */
+    width: auto;       /* preserve aspect ratio */
+    object-fit: contain;
+}
+
+.logo-row img:hover {
+    opacity: 1;
+}
