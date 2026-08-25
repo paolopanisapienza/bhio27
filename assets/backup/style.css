@@ -60,36 +60,28 @@ a { color: inherit; }
 }
 .nav-links a:hover { color: white; border-color: var(--gold); }
 .nav-toggle { display: none; background: transparent; color: white; border: 0; font-size: 1.6rem; }
-
 .hero {
   min-height: 100vh;
   display: grid;
   place-items: center;
   position: relative;
   overflow: hidden;
-
-  background-image: url("bhio-topics-hero-v2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background:
+    radial-gradient(circle at 51% 52%, rgba(255,194,87,.94) 0 2%, rgba(255,145,46,.72) 3% 4%, rgba(20,12,6,.95) 5% 10%, rgba(200,155,60,.48) 11% 13%, transparent 14%),
+    radial-gradient(ellipse at 50% 54%, transparent 0 20%, rgba(225,170,80,.54) 21% 22%, transparent 25%),
+    radial-gradient(circle at 62% 44%, rgba(255,255,255,.52), transparent 1.5%),
+    radial-gradient(circle at 42% 62%, rgba(255,255,255,.35), transparent 1.2%),
+    linear-gradient(125deg, #020308 0%, #081020 45%, #20120a 100%);
 }
-
-.hero::before {
-  content: none;
-}
-
-.hero-overlay {
+.hero:before {
+  content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 3, 8, 0.48),
-    rgba(2, 3, 8, 0.22) 60%,
-    rgba(2, 3, 8, 0.36)
-  );
+  inset: -20%;
+  background: repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,.10) 0 1px, transparent 1px 9px);
+  opacity: .15;
+  transform: rotate(-12deg);
 }
-
-
+.hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle, transparent 0 25%, rgba(0,0,0,.42) 60%, rgba(0,0,0,.85) 100%); }
 .hero-content {
   position: relative;
   z-index: 2;
