@@ -1,30 +1,220 @@
 <!doctype html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Registration &mdash; BHIO II
-  </title>
-  <link href="assets/style.css" rel="stylesheet"/>
- </head>
- <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register for Black Holes Inside and Out II, 23–27 August 2027 at Sapienza University of Rome.">
+  <title>Registration — BHIO II</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .registration-intro { margin-bottom: 2rem; }
+    .registration-intro strong { color: #10151f; }
+    .registration-card {
+      background: #fff;
+      border: 1px solid rgba(16, 21, 31, .12);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(16, 21, 31, .08);
+      overflow: hidden;
+    }
+    .form-section { padding: 2rem; }
+    .form-section + .form-section { border-top: 1px solid rgba(16, 21, 31, .1); }
+    .form-section h2 { margin-top: 0; }
+    .section-note, .field-hint { color: #5f6671; }
+    .section-note { margin-top: -.55rem; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+    .field { min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    .field label, .group-label { display: block; margin-bottom: .45rem; font-weight: 700; }
+    .required { color: #9b6516; }
+    .field input, .field select, .field textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: .8rem .9rem;
+      color: #10151f;
+      background: #fbf8f2;
+      border: 1px solid #b9b5ad;
+      border-radius: 9px;
+      font: inherit;
+      line-height: 1.4;
+    }
+    .field textarea { min-height: 8rem; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: 3px solid rgba(200, 155, 60, .3);
+      border-color: #9b762d;
+    }
+    .field-hint { display: block; margin-top: .4rem; font-size: .88rem; }
+    .choice-row { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
+    .choice { display: inline-flex; align-items: center; gap: .5rem; }
+    .choice input { width: 1.1rem; height: 1.1rem; accent-color: #c89b3c; }
+    .poster-details[hidden] { display: none; }
+    .privacy-box { display: flex; align-items: flex-start; gap: .65rem; }
+    .privacy-box input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; margin-top: .2rem; accent-color: #c89b3c; }
+    .form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: #f2ede3;
+    }
+    .form-actions p { margin: 0; color: #5f6671; font-size: .9rem; }
+    .submit-button { border: 0; cursor: pointer; white-space: nowrap; }
+    .submit-button:hover { filter: brightness(.95); transform: translateY(-1px); }
+    .noscript-note { padding: 1rem; background: #fff2ce; border-radius: 8px; }
+    @media (max-width: 700px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .form-section { padding: 1.35rem; }
+      .form-actions { align-items: stretch; flex-direction: column; padding: 1.35rem; }
+      .submit-button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <noscript><style>.poster-details[hidden] { display: block !important; }</style></noscript>
   <header class="site-header small">
-   <nav class="nav">
-    <a class="brand" href="index.html">
-     BHIO II
-    </a>
-    <button aria-label="Toggle navigation" class="nav-toggle">
-     ☰
-    </button>
-    <div class="nav-links">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">BHIO II</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
         <a href="about.html">About</a>
         <a href="program.html">Program</a>
         <a href="speakers.html">Invited Speakers</a>
         <a href="participants.html">Participants</a>
         <a href="posters.html">Posters</a>
-        <a href="registration.html">Registration</a>
+        <a href="registration.html" aria-current="page">Registration</a>
         <a href="travel.html">Travel Info</a>
         <a href="explore-rome.html">Explore Rome</a>
       </div>
-   </nav></header><main class="page"><section class="page-title"><p class="eyebrow">Registration and abstract submission</p><h1>Registration</h1></section><section class="section narrow"><p>Registration will open soon. Participation is expected to be limited, and early registration is recommended.</p><p>Once available, the registration form can be linked below.</p><p><a class="button primary" href="#">Registration form coming soon</a></p><h2>Suggested registration-form fields</h2><ul><li>Name and surname</li><li>Institution</li><li>Email address</li><li>Career stage</li><li>Will you submit a poster?</li><li>Poster title and abstract</li><li>Dietary requirements</li><li>Accessibility requirements</li></ul></section></main><footer><p>Black Holes Inside and Out II · Sapienza University of Rome</p></footer><script src="assets/script.js"></script></body></html>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-title">
+      <p class="eyebrow">Registration and abstract submission</p>
+      <h1>Registration</h1>
+    </section>
+
+    <section class="section narrow">
+      <div class="registration-intro">
+        <p>Join us at <strong>Sapienza University of Rome, 23–27 August 2027</strong>, for Black Holes Inside and Out II.</p>
+        <p>Participation is expected to be limited. Please complete all required fields; the organizers will confirm your place by email.</p>
+      </div>
+
+      <!-- This static-site form opens the visitor's email client. Replace the
+           mailto action with your form-provider endpoint when one is available. -->
+      <form class="registration-card" action="mailto:bhio27@uniroma1.it" method="post" enctype="text/plain">
+        <section class="form-section" aria-labelledby="personal-heading">
+          <h2 id="personal-heading">Your details</h2>
+          <p class="section-note">Fields marked <span class="required">*</span> are required.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="first-name">First name <span class="required">*</span></label>
+              <input id="first-name" name="First name" type="text" autocomplete="given-name" required>
+            </div>
+            <div class="field">
+              <label for="last-name">Last name <span class="required">*</span></label>
+              <input id="last-name" name="Last name" type="text" autocomplete="family-name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email address <span class="required">*</span></label>
+              <input id="email" name="Email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="institution">Institution <span class="required">*</span></label>
+              <input id="institution" name="Institution" type="text" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="country">Country/region <span class="required">*</span></label>
+              <input id="country" name="Country or region" type="text" autocomplete="country-name" required>
+            </div>
+            <div class="field">
+              <label for="career-stage">Career stage <span class="required">*</span></label>
+              <select id="career-stage" name="Career stage" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Master's student</option>
+                <option>PhD student</option>
+                <option>Postdoctoral researcher</option>
+                <option>Faculty / permanent researcher</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="contribution-heading">
+          <h2 id="contribution-heading">Scientific contribution</h2>
+          <div class="form-grid">
+            <fieldset class="field full">
+              <legend class="group-label">Would you like to present a poster? <span class="required">*</span></legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="Poster presentation" value="Yes" required> Yes</label>
+                <label class="choice"><input type="radio" name="Poster presentation" value="No"> No</label>
+              </div>
+            </fieldset>
+            <div class="field full poster-details" hidden>
+              <label for="poster-title">Poster title <span class="required">*</span></label>
+              <input id="poster-title" name="Poster title" type="text">
+            </div>
+            <div class="field full poster-details" hidden>
+              <label for="abstract">Abstract <span class="required">*</span></label>
+              <textarea id="abstract" name="Abstract" maxlength="2000"></textarea>
+              <small class="field-hint">Maximum 2,000 characters.</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="practical-heading">
+          <h2 id="practical-heading">Practical information</h2>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="dietary">Dietary requirements</label>
+              <textarea id="dietary" name="Dietary requirements" rows="3" placeholder="Please include allergies or write “None”."></textarea>
+            </div>
+            <div class="field full">
+              <label for="accessibility">Accessibility requirements</label>
+              <textarea id="accessibility" name="Accessibility requirements" rows="3" placeholder="Tell us how we can support your participation."></textarea>
+            </div>
+            <div class="field full">
+              <label class="privacy-box" for="privacy-consent">
+                <input id="privacy-consent" name="Privacy consent" type="checkbox" value="Agreed" required>
+                <span>I consent to the organizers using these details to manage my participation in BHIO II. <span class="required">*</span></span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <p>Submitting opens your email application with the completed form addressed to the organizers.</p>
+          <button class="button primary submit-button" type="submit">Submit registration</button>
+        </div>
+      </form>
+
+      <noscript><p class="noscript-note">JavaScript is disabled. The form will still submit; poster fields are shown for all registrants. For assistance, email <a href="mailto:bhio27@uniroma1.it">bhio27@uniroma1.it</a>.</p></noscript>
+      <p>Questions? Contact <a href="mailto:bhio27@uniroma1.it">bhio27@uniroma1.it</a>.</p>
+    </section>
+  </main>
+
+  <footer><p>Black Holes Inside and Out II · Sapienza University of Rome</p></footer>
+  <script src="assets/script.js"></script>
+  <script>
+    const posterChoices = document.querySelectorAll('input[name="Poster presentation"]');
+    const posterDetails = document.querySelectorAll('.poster-details');
+    const posterTitle = document.getElementById('poster-title');
+    const abstract = document.getElementById('abstract');
+
+    function updatePosterFields() {
+      const presenting = document.querySelector('input[name="Poster presentation"]:checked')?.value === 'Yes';
+      posterDetails.forEach((field) => { field.hidden = !presenting; });
+      posterTitle.required = presenting;
+      abstract.required = presenting;
+      if (!presenting) {
+        posterTitle.value = '';
+        abstract.value = '';
+      }
+    }
+
+    posterChoices.forEach((choice) => choice.addEventListener('change', updatePosterFields));
+  </script>
+</body>
+</html>
