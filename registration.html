@@ -60,6 +60,12 @@
     .form-actions p { margin: 0; color: #5f6671; font-size: .9rem; }
     .submit-button { border: 0; cursor: pointer; white-space: nowrap; }
     .submit-button:hover { filter: brightness(.95); transform: translateY(-1px); }
+    .submit-button:disabled { cursor: wait; filter: grayscale(.35); opacity: .7; transform: none; }
+    .form-status { margin: 0; padding: 1rem 2rem; border-top: 1px solid rgba(16, 21, 31, .1); }
+    .form-status:empty { display: none; }
+    .form-status.success { color: #245d3a; background: #e8f4eb; }
+    .form-status.error { color: #842c2c; background: #fbeaea; }
+    .honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
     .noscript-note { padding: 1rem; background: #fff2ce; border-radius: 8px; }
     @media (max-width: 700px) {
       .form-grid { grid-template-columns: 1fr; }
@@ -101,9 +107,12 @@
         <p>Participation is expected to be limited. Please complete all required fields; the organizers will confirm your place by email.</p>
       </div>
 
-      <!-- This static-site form opens the visitor's email client. Replace the
-           mailto action with your form-provider endpoint when one is available. -->
-      <form class="registration-card" action="mailto:bhio27@uniroma1.it" method="post" enctype="text/plain">
+      <form class="registration-card" action="https://formspree.io/f/myegqnzk" method="post">
+        <input type="hidden" name="_subject" value="New BHIO II registration">
+        <div class="honeypot" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+        </div>
         <section class="form-section" aria-labelledby="personal-heading">
           <h2 id="personal-heading">Your details</h2>
           <p class="section-note">Fields marked <span class="required">*</span> are required.</p>
@@ -185,9 +194,10 @@
         </section>
 
         <div class="form-actions">
-          <p>Submitting opens your email application with the completed form addressed to the organizers.</p>
+          <p>Your registration will be sent securely to the conference organizers.</p>
           <button class="button primary submit-button" type="submit">Submit registration</button>
         </div>
+        <p class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
       </form>
 
       <noscript><p class="noscript-note">JavaScript is disabled. The form will still submit; poster fields are shown for all registrants. For assistance, email <a href="mailto:bhio27@uniroma1.it">bhio27@uniroma1.it</a>.</p></noscript>
@@ -202,6 +212,9 @@
     const posterDetails = document.querySelectorAll('.poster-details');
     const posterTitle = document.getElementById('poster-title');
     const abstract = document.getElementById('abstract');
+    const registrationForm = document.querySelector('.registration-card');
+    const submitButton = registrationForm.querySelector('.submit-button');
+    const formStatus = registrationForm.querySelector('.form-status');
 
     function updatePosterFields() {
       const presenting = document.querySelector('input[name="Poster presentation"]:checked')?.value === 'Yes';
@@ -215,6 +228,38 @@
     }
 
     posterChoices.forEach((choice) => choice.addEventListener('change', updatePosterFields));
+
+    registrationForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!registrationForm.reportValidity()) return;
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting…';
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+
+      try {
+        const response = await fetch(registrationForm.action, {
+          method: 'POST',
+          body: new FormData(registrationForm),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Submission failed');
+
+        registrationForm.reset();
+        updatePosterFields();
+        formStatus.classList.add('success');
+        formStatus.textContent = 'Thank you. Your registration has been submitted successfully.';
+        formStatus.focus();
+      } catch (error) {
+        formStatus.classList.add('error');
+        formStatus.innerHTML = 'We could not submit your registration. Please try again or email <a href="mailto:bhio27@uniroma1.it">bhio27@uniroma1.it</a>.';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit registration';
+      }
+    });
   </script>
 </body>
 </html>
