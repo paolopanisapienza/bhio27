@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register for Black Holes III, 23–27 August 2027 at Sapienza University of Rome.">
+  <title>Registration — BH3</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .registration-intro { margin-bottom: 2rem; }
+    .registration-intro strong { color: #10151f; }
+    .registration-card {
+      background: #fff;
+      border: 1px solid rgba(16, 21, 31, .12);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(16, 21, 31, .08);
+      overflow: hidden;
+    }
+    .form-section { padding: 2rem; }
+    .form-section + .form-section { border-top: 1px solid rgba(16, 21, 31, .1); }
+    .form-section h2 { margin-top: 0; }
+    .section-note, .field-hint { color: #5f6671; }
+    .section-note { margin-top: -.55rem; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+    .field { min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    .field label, .group-label { display: block; margin-bottom: .45rem; font-weight: 700; }
+    .required { color: #9b6516; }
+    .field input, .field select, .field textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: .8rem .9rem;
+      color: #10151f;
+      background: #fbf8f2;
+      border: 1px solid #b9b5ad;
+      border-radius: 9px;
+      font: inherit;
+      line-height: 1.4;
+    }
+    .field textarea { min-height: 8rem; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: 3px solid rgba(200, 155, 60, .3);
+      border-color: #9b762d;
+    }
+    .field-hint { display: block; margin-top: .4rem; font-size: .88rem; }
+    .choice-row { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
+    .choice { display: inline-flex; align-items: center; gap: .5rem; }
+    .choice input { width: 1.1rem; height: 1.1rem; accent-color: #c89b3c; }
+    .poster-details[hidden] { display: none; }
+    .privacy-box { display: flex; align-items: flex-start; gap: .65rem; }
+    .privacy-box input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; margin-top: .2rem; accent-color: #c89b3c; }
+    .form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: #f2ede3;
+    }
+    .form-actions p { margin: 0; color: #5f6671; font-size: .9rem; }
+    .submit-button { border: 0; cursor: pointer; white-space: nowrap; }
+    .submit-button:hover { filter: brightness(.95); transform: translateY(-1px); }
+    .submit-button:disabled { cursor: wait; filter: grayscale(.35); opacity: .7; transform: none; }
+    .form-status { margin: 0; padding: 1rem 2rem; border-top: 1px solid rgba(16, 21, 31, .1); }
+    .form-status:empty { display: none; }
+    .form-status.success { color: #245d3a; background: #e8f4eb; }
+    .form-status.error { color: #842c2c; background: #fbeaea; }
+    .honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+    .noscript-note { padding: 1rem; background: #fff2ce; border-radius: 8px; }
+    @media (max-width: 700px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .form-section { padding: 1.35rem; }
+      .form-actions { align-items: stretch; flex-direction: column; padding: 1.35rem; }
+      .submit-button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <noscript><style>.poster-details[hidden] { display: block !important; }</style></noscript>
+  <header class="site-header small">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">BH3</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="program.html">Program</a>
+        <a href="speakers.html">Invited Speakers</a>
+        <a href="participants.html">Participants</a>
+        <a href="posters.html">Posters</a>
+        <a href="registration.html" aria-current="page">Registration</a>
+        <a href="travel.html">Travel Info</a>
+        <a href="explore-rome.html">Explore Rome</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-title">
+      <p class="eyebrow">Registration and information submission</p>
+      <h1>Registration</h1>
+    </section>
+
+    <section class="section narrow">
+      <div class="registration-intro">
+        <p>Join us at <strong>Sapienza University of Rome, 23–27 August 2027</strong>, for Black Holes III.</p>
+        <p>Participation is expected to be limited. Please complete all required fields; the organizers will confirm your place by email. The first round of confirmations will be sent off after October 31st, 2026</p>
+      </div>
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUJjnuQAhXcPIULTIASBT43X4hBwP0qyOkLcjNC9XO9lDilA/viewform?embedded=true" width="640" height="2220" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+</body>
+</html>
