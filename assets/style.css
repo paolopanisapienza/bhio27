@@ -260,3 +260,14 @@ ul { padding-left: 1.2rem; }
 .questions-block {
   margin-top: 3rem;
 }
+
+.about-logo-block {
+  margin: 4rem auto 3rem auto;
+  text-align: center;
+}
+
+.about-logo {
+  max-width: 420px;
+  width: 75%;
+  height: auto;
+}
